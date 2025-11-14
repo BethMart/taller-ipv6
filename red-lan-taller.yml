@@ -51,6 +51,10 @@ topology:
        - ip -6 route del default dev eth0
        - ip route del default dev eth0
 
+    PC4: 
+      kind: linux # "Alpine Linux v3.12"
+      image: ghcr.io/hellt/network-multitool  
+     
     server-web:
       kind: linux
       image: docker.io/esanchezv/srvhttps:latest
@@ -63,6 +67,7 @@ topology:
        - configs/tallerclab.html:/var/www/localhost/htdocs/index.html
            
 
+
   links:
     - endpoints: ["router-cisco:Ethernet0/1","switch-arista:eth1"]
     - endpoints: ["router-cisco:Ethernet0/2","server-web:eth1"]
@@ -71,4 +76,7 @@ topology:
     - endpoints: ["PC2:eth1","switch-arista:eth3"]
       mtu: 1500
     - endpoints: ["PC3:eth1","switch-arista:eth4"]
-      mtu: 1500      
+      mtu: 1500  
+    - endpoints: ["PC4:eth1","switch-arista:eth5"]
+      mtu: 1500
+      
