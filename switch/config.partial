@@ -3,8 +3,8 @@ vlan 10-11
 exit
 interface Ethernet0/1
 switchport trunk encapsulation dot1q
-switchport trunk allowed vlan 10,11
 switchport mode trunk
+switchport trunk allowed vlan 10,11
 no shut
 exit
 interface Ethernet0/2
