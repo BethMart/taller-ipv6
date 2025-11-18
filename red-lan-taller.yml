@@ -1,5 +1,7 @@
 name: labtaller
-
+mgmt:
+  network: redtaller
+  ipv4-subnet: 172.21.21.0/24
 topology:
   nodes:
   
