@@ -2,6 +2,7 @@ conf t
 ipv6 unicast-routing
 ip routing
 interface ethernet 0/1.10
+ipv6 address 2001:db8:10::1/64
 encapsulation dot1Q 10
 no shut
 exit
